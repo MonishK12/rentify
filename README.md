@@ -2,13 +2,19 @@
 ## RENTIFY APP
 For Project Demo - Refer 
 ## Rentify-App tour(Screenshots Added) pdf attached in the repo
-Tech Stack - Nextjs , Tailwind Css , Mongodb 
-Register and Login Functionality - Using Next Auth
-Models directory - Schema for users and properties
-App/api directory - Server side functionality
-Image Upload - Using Uploadthing API
-Mail on Interested - Using Nodemailer Sending Email For both Customer And Seller 
-Tech stack - Next JS, Tailwind CSS, Shadcn, MongoDB, NextAuth
+## Tech Stack
+- Next.js
+- Tailwind CSS
+- MongoDB
+- NextAuth
+- Shadcn
+
+## Features
+- **Register and Login Functionality**: Using NextAuth
+- **Models Directory**: Schema for users and properties
+- **App/API Directory**: Server-side functionality
+- **Image Upload**: Using Uploadthing API
+- **Mail on Interested**: Using Nodemailer to send emails for both Customer and Seller
 
 ## App Functionalities:
 
