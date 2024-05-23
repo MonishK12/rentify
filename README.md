@@ -1,35 +1,31 @@
 
 ## RENTIFY APP
-
-# Tech Stack - Nextjs , Tailwind Css , Mongodb 
-
-# Register and Login Functionality - Using Next Auth
-
-# Models directory - Schema for users and properties
-
-# App/api directory - Server side functionality
-
-# Image Upload - Using Uploadthing API
-
-# Mail on Interested - Using Nodemailer Sending Email For both Customer And Seller 
-
-# Tech stack - Next JS, Tailwind CSS, Shadcn, MongoDB, NextAuth
+For Project Demo - Refer 
+## Rentify-App tour(Screenshots Added) pdf attached in the repo
+Tech Stack - Nextjs , Tailwind Css , Mongodb 
+Register and Login Functionality - Using Next Auth
+Models directory - Schema for users and properties
+App/api directory - Server side functionality
+Image Upload - Using Uploadthing API
+Mail on Interested - Using Nodemailer Sending Email For both Customer And Seller 
+Tech stack - Next JS, Tailwind CSS, Shadcn, MongoDB, NextAuth
 
 ## App Functionalities:
 
- --> Homepage
-   --> Register/Login
-      --> Dashborad (role based, protected routes)
-        --> Add Property
-        --> View your property listings
-            --> Update property
-            --> View Property page
-            --> Delete property
-        --> View all available properties
-            --> View property page
-            --> Filter properties
-            --> Get seller details for interested properties
-            --> Seller and Customer receive a mail
+- Homepage
+  - Register/Login
+    - Dashboard (role-based, protected routes)
+      - Add Property
+      - View your property listings
+        - Update property
+        - View Property page
+        - Delete property
+      - View all available properties
+        - View property page
+        - Filter properties
+        - Get seller details for interested properties
+        - Seller and Customer receive a mail
+
 
 ## Libraries Used
 
@@ -71,5 +67,4 @@ embla-carousel-react: 8.1.3
 tailwind-merge: 2.3.0
 tailwindcss-animate: 1.0.7
 
-For Project Demo - Refer 
-## Rentify-App tour(Screenshots Added) pdf attached in the repo
+
