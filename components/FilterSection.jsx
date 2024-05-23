@@ -3,7 +3,7 @@
 import MyCard from "@/components/MyCard";
 import { Button } from "@/components/ui/button";
 import React, { useState, useEffect } from "react";
-import Pagination from "./pagination";
+import Pagination from "./Pagination";
 
 const FilterSection = ({ propertyData }) => {
   const [newPropertyData, setNewPropertyData] = useState(propertyData);
