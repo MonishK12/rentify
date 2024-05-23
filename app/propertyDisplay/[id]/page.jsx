@@ -228,8 +228,8 @@ export default async function PropertyDisplayScreen({ params }) {
             </div>
 
             <div className="px-2 space-x-2 space-y-2">
-              {amenitiesList?.map((item) => (
-              <Badge>{item}</Badge>
+              {amenitiesList?.map((item,idx) => (
+              <span key={idx} ><Badge>{item}</Badge></span>
               ))}
             </div>
           </div>
