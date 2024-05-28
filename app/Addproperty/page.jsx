@@ -11,7 +11,7 @@ import Navbar from '@/components/Navbar';
 
 async function Addproperty() {
   const session = await getServerSession(authOptions);
-  if (!session) redirect("/");
+  if (!session) redirect("/login");
   return (
     <div >
       <Navbar/>
