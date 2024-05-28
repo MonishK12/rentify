@@ -10,7 +10,7 @@ import Navbar from "@/components/Navbar";
 
 const PropertyPage = async () => {
   const session = await getServerSession(authOptions);
-  if(!session) redirect("/");
+  if(!session) redirect("/login");
   await connectMongoDB();
   const propertys = await Property.find({
     creatoremail: session?.user.email,
