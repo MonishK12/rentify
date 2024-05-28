@@ -32,7 +32,7 @@ const Navbar = () => {
     };
 
     if (showLogin) {
-        return <LoginForm />;
+        router.push("/login");
     }
 
     return (
