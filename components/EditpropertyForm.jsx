@@ -10,8 +10,13 @@ const EditPropertyForm = ({ property }) => {
   const [title, setTitle] = useState(property.title);
   const [description, setDescription] = useState(property.description);
   const [type, setType] = useState(property.type);
-  const [location, setLocation] = useState(property.location);
+  const [doorNo, setDoorNo] = useState(property.doorNo);
+  const [area, setArea] = useState(property.area);
+  const [city, setCity] = useState(property.city);
+  const [state, setState] = useState(property.state);
+  const [pincode, setPincode] = useState(property.pincode);
   const [rent, setRent] = useState(property.rent);
+  const [deposit, setDeposit] = useState(property.deposit);
   const [bedrooms, setBedrooms] = useState(property.bedrooms);
   const [bathrooms, setBathrooms] = useState(property.bathrooms);
   const [amenities, setAmenities] = useState(property.amenities);
@@ -47,7 +52,22 @@ const EditPropertyForm = ({ property }) => {
     e.preventDefault();
     setError("");
 
-    if (!title || !description || !type || !location || !rent || !bedrooms || !bathrooms || !amenities || !imageUploaded.length) {
+    if (
+      !title ||
+      !description ||
+      !type ||
+      !doorNo ||
+      !area ||
+      !city ||
+      !state ||
+      !pincode ||
+      !rent ||
+      !deposit ||
+      !bedrooms ||
+      !bathrooms ||
+      !amenities ||
+      !imageUploaded.length
+    ) {
       setError("All fields are necessary.");
       return;
     }
@@ -63,8 +83,13 @@ const EditPropertyForm = ({ property }) => {
           title,
           description,
           type,
-          location,
+          doorNo,
+          area,
+          city,
+          state,
+          pincode,
           rent,
+          deposit,
           bedrooms,
           bathrooms,
           amenities,
@@ -73,10 +98,9 @@ const EditPropertyForm = ({ property }) => {
       });
 
       if (res.ok) {
-        router.push("/");
+        router.push("/property");
       } else {
         const data = await res.json();
-        console.log(data)
         setError(data.message || "Property update failed.");
       }
     } catch (error) {
@@ -126,13 +150,57 @@ const EditPropertyForm = ({ property }) => {
             />
           </div>
           <div>
-            <label htmlFor="location" className="block text-sm font-medium text-gray-700">Location (City, State, Zip Code)</label>
+            <label htmlFor="doorNo" className="block text-sm font-medium text-gray-700">Door Number</label>
             <input
-              id="location"
-              onChange={(e) => setLocation(e.target.value)}
+              id="doorNo"
+              onChange={(e) => setDoorNo(e.target.value)}
               type="text"
-              placeholder="Location (City, State, Zip Code)"
-              value={location}
+              placeholder="Door Number"
+              value={doorNo}
+              className="w-full px-3 py-2 border rounded-md"
+            />
+          </div>
+          <div>
+            <label htmlFor="area" className="block text-sm font-medium text-gray-700">Area</label>
+            <input
+              id="area"
+              onChange={(e) => setArea(e.target.value)}
+              type="text"
+              placeholder="Area"
+              value={area}
+              className="w-full px-3 py-2 border rounded-md"
+            />
+          </div>
+          <div>
+            <label htmlFor="city" className="block text-sm font-medium text-gray-700">City</label>
+            <input
+              id="city"
+              onChange={(e) => setCity(e.target.value)}
+              type="text"
+              placeholder="City"
+              value={city}
+              className="w-full px-3 py-2 border rounded-md"
+            />
+          </div>
+          <div>
+            <label htmlFor="state" className="block text-sm font-medium text-gray-700">State</label>
+            <input
+              id="state"
+              onChange={(e) => setState(e.target.value)}
+              type="text"
+              placeholder="State"
+              value={state}
+              className="w-full px-3 py-2 border rounded-md"
+            />
+          </div>
+          <div>
+            <label htmlFor="pincode" className="block text-sm font-medium text-gray-700">Pincode</label>
+            <input
+              id="pincode"
+              onChange={(e) => setPincode(e.target.value)}
+              type="text"
+              placeholder="Pincode"
+              value={pincode}
               className="w-full px-3 py-2 border rounded-md"
             />
           </div>
@@ -144,6 +212,17 @@ const EditPropertyForm = ({ property }) => {
               type="number"
               placeholder="Rent Amount"
               value={rent}
+              className="w-full px-3 py-2 border rounded-md"
+            />
+          </div>
+          <div>
+            <label htmlFor="deposit" className="block text-sm font-medium text-gray-700">Deposit Amount</label>
+            <input
+              id="deposit"
+              onChange={(e) => setDeposit(e.target.value)}
+              type="number"
+              placeholder="Deposit Amount"
+              value={deposit}
               className="w-full px-3 py-2 border rounded-md"
             />
           </div>
