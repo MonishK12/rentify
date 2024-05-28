@@ -57,7 +57,7 @@ const PropertyColumns = [
     header: ({ column }) => {
       return (
         <div className="flex justify-start items-center w-full text-left">
-          <DataTableColumnHeader column={column} title="Total Models" />
+          <DataTableColumnHeader column={column} title="Total Bedrooms" />
         </div>
       );
     },
